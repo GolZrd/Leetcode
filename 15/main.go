@@ -15,6 +15,8 @@ func threeSum(nums []int) [][]int {
 	slices.Sort(nums)
 
 	for i, j := range nums {
+		// Проверяем что в цикле нынешнее число не равно предыдущему.
+		//Если идут -1, -1, в таком случае цикл пропускает эту итерацию
 		if i > 0 && j == nums[i-1] {
 			continue
 		}
